@@ -57,8 +57,8 @@ function App() {
   return (
     <div className="app">
       <div className="app-container">
-        <div className="alert-container">{show && <Alert />}</div>
-        <h1>Grocery</h1>
+        {<Alert />}
+        <h1>Groceries</h1>
         <form onSubmit={handleSubmit}>
           <input
             ref={refContainer}
@@ -87,7 +87,7 @@ function App() {
               Clear List
               <FaTrashAlt className="btn-trash" />
             </button>
-            <span>0</span>
+            <span>{list.length}</span>
           </div>
         )}
         {list.length > 0 && (

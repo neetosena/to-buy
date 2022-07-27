@@ -5,7 +5,7 @@ import { useGlobalContext } from "../context";
 
 const List = () => {
   const { list, handleChange, changeItem, removeItem } = useGlobalContext();
-  console.log(list);
+
   return (
     <div className="list-container">
       {list

@@ -14,13 +14,12 @@ const reducer = (state, action) => {
       }
       return item;
     });
-    console.log(action.payload);
+
     return { ...state, list: checkboxIsSelected };
   }
 
   if (action.type === "CHANGE_ITEM") {
     const changeItem = state.list.find((item) => item.id === action.payload);
-    console.log("changeItem:", changeItem.name);
     const name = changeItem.name;
     const id = changeItem.id;
     return {
@@ -76,7 +75,7 @@ const reducer = (state, action) => {
         list: [...state.list, newList],
         changeState: true,
         show: true,
-        type: "danger",
+        type: "success",
         msg: "Item added",
       };
     } else if (checkItem.name.toLowerCase() !== action.payload.toLowerCase()) {
@@ -85,7 +84,7 @@ const reducer = (state, action) => {
         list: [...state.list, newList],
         changeState: true,
         show: true,
-        type: "danger",
+        type: "success",
         msg: "Item added",
       };
     } else {
@@ -93,7 +92,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         show: true,
-        type: "danger",
+        type: "danger-exist",
         msg: "Item already exist",
       };
     }
@@ -114,7 +113,7 @@ const reducer = (state, action) => {
       changeButton: false,
       list: editedItem,
       show: true,
-      type: "success",
+      type: "success-changed",
       msg: "Item Changed",
     };
   }

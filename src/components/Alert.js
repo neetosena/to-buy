@@ -16,8 +16,14 @@ const Alert = () => {
 
   return (
     <div className={`alert alert-${type}`}>
-      {msg}
-      {type === "danger" ? <FaTrashAlt /> : <HiPlusSm />}
+      <div>
+        {msg}
+        {type === "danger" ? (
+          <FaTrashAlt className="alert-icon" />
+        ) : (
+          <HiPlusSm className="alert-icon" />
+        )}
+      </div>
     </div>
   );
 };

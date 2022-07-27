@@ -57,7 +57,7 @@ function App() {
   return (
     <div className="app">
       <div className="app-container">
-        {show && <Alert />}
+        <div className="alert-container">{show && <Alert />}</div>
         <h1>Grocery</h1>
         <form onSubmit={handleSubmit}>
           <input

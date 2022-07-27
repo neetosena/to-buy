@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { TbEdit } from "react-icons/tb";
 import { FaTrashAlt } from "react-icons/fa";
 import { useGlobalContext } from "../context";

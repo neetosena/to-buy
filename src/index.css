@@ -30,6 +30,7 @@ code {
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: top center;
+  z-index: -1;
 }
 .app::after {
   content: "";
@@ -38,13 +39,42 @@ code {
   left: 0;
   width: 100vw;
   min-height: 100vh;
-
   background-image: url("./images/background-2.jpg");
   background-repeat: repeat;
   background-size: 100%;
   background-position: bottom center;
+  z-index: -2;
+}
+
+/* .circle-background {
+  content: "";
+  position: absolute;
+  bottom: -5em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200%;
+  height: 40em;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.7;
   z-index: -1;
 }
+.circle-background::after {
+  content: "";
+  position: absolute;
+  bottom: -5em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110%;
+  height: 44em;
+  margin: 0 auto;
+  background-color: rgb(237, 218, 218);
+  background-blend-mode: lighten;
+  border-radius: 50%;
+  opacity: 1;
+  z-index: 0;
+} */
 
 @media (max-width: 1126px) {
   .app {
@@ -151,7 +181,7 @@ input[type="text"] {
   display: flex;
   padding: 0.3em;
   margin-bottom: 1em;
-  background: #f3d4b2;
+  background: white;
   border-radius: 0.5em;
   transition: opacity 1s;
   -webkit-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.25);
@@ -169,6 +199,8 @@ input[type="text"] {
   background: white;
   border-radius: 0.7em;
   box-shadow: none;
+  -webkit-box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.12);
 }
 .icon {
   color: var(--blue-color);

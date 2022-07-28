@@ -25,6 +25,7 @@ function App() {
   } = useGlobalContext();
 
   const [input, setInput] = useState("");
+  const [showCustomAlert, setShowCustomAlert] = useState(false);
 
   useEffect(() => {
     setInput(item);
@@ -36,6 +37,24 @@ function App() {
     refContainer.current.focus();
   }, [changeState]);
 
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      showAlertEmptyValue();
+    }, 2000);
+    return () => clearTimeout(timeout);
+  }, [showCustomAlert]);
+
+  const showAlertEmptyValue = () => {
+    console.log(showCustomAlert);
+    if (showCustomAlert) {
+      showAlert(true, "danger", "Please enter the value");
+    } else {
+      showAlert(false);
+    }
+    setShowCustomAlert(false);
+    console.log(showCustomAlert);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -43,14 +62,16 @@ function App() {
       if (input) {
         checkItemAndAddItem(input);
       } else {
-        showAlert(true, "danger", "Please enter the value");
+        setShowCustomAlert(true);
+        // showAlert(true, "danger", "Please enter the value");
       }
 
       setInput("");
     } else if (input) {
       editItemHandleSubmit(id, input);
     } else {
-      showAlert(true, "danger", "Please enter the value");
+      setShowCustomAlert(true);
+      // showAlert(true, "danger", "Please enter the value");
     }
   };
 
@@ -95,6 +116,7 @@ function App() {
             <List input={input} />
           </div>
         )}
+        <div className="circle-background"></div>
       </div>
     </div>
   );

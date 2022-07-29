@@ -78,6 +78,9 @@ function App() {
   return (
     <div className="app">
       <div className="app-container">
+        <div className="circle-background">
+          <div></div>
+        </div>
         {<Alert />}
         <h1>Groceries</h1>
         <form onSubmit={handleSubmit}>
@@ -116,7 +119,6 @@ function App() {
             <List input={input} />
           </div>
         )}
-        <div className="circle-background"></div>
       </div>
     </div>
   );

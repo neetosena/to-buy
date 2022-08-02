@@ -74,6 +74,15 @@ function App() {
       // showAlert(true, "danger", "Please enter the value");
     }
   };
+  const checkTheLenghtofCheckbox = () => {
+    let count = 0;
+    const findChecked = list
+      .filter((item) => item.checked)
+      .map((item, index) => {
+        count = index + 1;
+      });
+    return count;
+  };
 
   return (
     <div className="app">
@@ -109,7 +118,8 @@ function App() {
                 Clear List
                 <FaTrashAlt className="btn-trash" />
               </button>
-              <span>{list.length}</span>
+              {/* <span>{list.length}</span> */}
+              <span>{checkTheLenghtofCheckbox()}</span>
             </div>
           )}
           {list.length > 0 && (

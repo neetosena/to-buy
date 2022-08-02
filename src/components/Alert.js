@@ -5,7 +5,7 @@ import { HiPlusSm } from "react-icons/hi";
 import { GoSync } from "react-icons/go";
 
 const Alert = () => {
-  const { list, type, msg, showAlert } = useGlobalContext();
+  const { list, type, msg, show, showAlert } = useGlobalContext();
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -13,7 +13,7 @@ const Alert = () => {
     }, 2000);
 
     return () => clearTimeout(timeout);
-  }, [list]);
+  }, [list, show]);
   console.log("ALERT", msg, type);
   return (
     <div className={`alert alert-${type}`}>

@@ -5,8 +5,21 @@
   --blue-color: #245de2;
   --pink-color: #ba1244;
 }
+
+#root {
+  max-width: 400px;
+  background: rgb(247, 247, 244);
+  background: linear-gradient(
+    165deg,
+    rgba(247, 247, 244, 1) 0%,
+    rgba(63, 111, 6, 1) 100%
+  );
+}
+
 body {
   margin: 0;
+  display: flex;
+  justify-content: center;
   font-family: "Abhaya Libre", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -19,78 +32,38 @@ code {
 }
 
 .app {
-  display: flex;
-
-  flex-direction: column;
-  align-items: center;
-  padding: 1em;
   min-height: 100vh;
-  background-image: url("./images/background-1.jpg");
-  background-size: 100% auto;
+  background-image: url("./images/background-3.png");
+  background-size: 160% auto;
   background-repeat: no-repeat;
   background-position: top center;
-  z-index: -1;
-}
-/* .app::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 120vw;
-
-  min-height: 100vh;
-  background: rgb(247, 247, 244);
-  background: linear-gradient(
-    165deg,
-    rgba(247, 247, 244, 1) 0%,
-    rgba(63, 111, 6, 1) 100%
-  );
-  border-radius: 50%;
-  z-index: -1;
-} */
-
-.circle-background {
-  position: absolute;
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-  z-index: -1;
 }
 
-.circle-background div {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 150%;
-  border: 1px solid magenta;
-  min-height: 100vh;
-  height: max-content;
-  background: rgb(247, 247, 244);
-  background: linear-gradient(
-    165deg,
-    rgba(247, 247, 244, 1) 0%,
-    rgba(63, 111, 6, 1) 100%
-  );
-  border-radius: 50%;
-  z-index: -1;
-}
-
-@media (max-width: 1126px) {
-  /* .app {
-    background-image: url("./images/background-3.jpg"),
-      url("./images/background-2.jpg");
-
-    background-position: top center, bottom center;
-    background-size: 100% auto, cover;
-  } */
+@media (min-width: 401px) {
+  body {
+    margin: 1em 0;
+    background-color: #e9eae7;
+  }
+  #root {
+    max-width: 700px;
+    height: 95vh;
+    width: 100%;
+    overflow: scroll;
+    -webkit-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.25);
+  }
+  .app {
+    background-size: 100% auto;
+    background-position: top center;
+  }
 }
 
 .app-container {
-  max-width: 800px;
   width: 100%;
+}
 
-  /* border: 1px solid gray; */
+.app-inner-container {
+  padding: 1em;
 }
 
 h1 {

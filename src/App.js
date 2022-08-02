@@ -78,47 +78,46 @@ function App() {
   return (
     <div className="app">
       <div className="app-container">
-        <div className="circle-background">
-          <div></div>
+        <div className="app-inner-container">
+          {<Alert />}
+          <h1>Groceries</h1>
+          <form onSubmit={handleSubmit}>
+            <input
+              ref={refContainer}
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+            />
+            <button type="submit">
+              {changeButton ? (
+                <GoSync className="submit-icon" />
+              ) : (
+                <HiPlusSm className="submit-icon" />
+              )}
+            </button>
+          </form>
+          {list.length > 0 && (
+            <div className="btn-container">
+              <button
+                className="btn-sorted"
+                type="button"
+                onClick={sortByChecked}
+              >
+                <BiSortDown className="btn-sorted-icon" />
+              </button>
+              <button className="btn-clear" type="button" onClick={clearList}>
+                Clear List
+                <FaTrashAlt className="btn-trash" />
+              </button>
+              <span>{list.length}</span>
+            </div>
+          )}
+          {list.length > 0 && (
+            <div className="wrapper-list">
+              <List input={input} />
+            </div>
+          )}
         </div>
-        {<Alert />}
-        <h1>Groceries</h1>
-        <form onSubmit={handleSubmit}>
-          <input
-            ref={refContainer}
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-          />
-          <button type="submit">
-            {changeButton ? (
-              <GoSync className="submit-icon" />
-            ) : (
-              <HiPlusSm className="submit-icon" />
-            )}
-          </button>
-        </form>
-        {list.length > 0 && (
-          <div className="btn-container">
-            <button
-              className="btn-sorted"
-              type="button"
-              onClick={sortByChecked}
-            >
-              <BiSortDown className="btn-sorted-icon" />
-            </button>
-            <button className="btn-clear" type="button" onClick={clearList}>
-              Clear List
-              <FaTrashAlt className="btn-trash" />
-            </button>
-            <span>{list.length}</span>
-          </div>
-        )}
-        {list.length > 0 && (
-          <div className="wrapper-list">
-            <List input={input} />
-          </div>
-        )}
       </div>
     </div>
   );

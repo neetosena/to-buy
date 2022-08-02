@@ -11,7 +11,7 @@
   background: rgb(247, 247, 244);
   background: linear-gradient(
     165deg,
-    rgba(247, 247, 244, 1) 50%,
+    rgb(213, 222, 203) 50%,
     rgba(63, 111, 6, 1) 100%
   );
 }
@@ -158,8 +158,8 @@ input[type="text"] {
   background: white;
   border-radius: 0.5em;
   transition: opacity 1s;
-  -webkit-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.25);
-  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.15);
 }
 
 .list-item.checked {

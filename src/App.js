@@ -77,7 +77,7 @@ function App() {
   const checkTheLenghtofCheckbox = () => {
     let count = 0;
     const findChecked = list
-      .filter((item) => item.checked)
+      .filter((item) => !item.checked)
       .map((item, index) => {
         count = index + 1;
       });

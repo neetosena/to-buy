@@ -14,7 +14,7 @@ const Alert = () => {
 
     return () => clearTimeout(timeout);
   }, [list]);
-
+  console.log("ALERT", msg, type);
   return (
     <div className={`alert alert-${type}`}>
       <div>

@@ -97,6 +97,7 @@ form {
   transform: translateY(-120%);
   opacity: 0;
   transition: transform ease-in 0.5s, opacity ease-in 1s;
+  z-index: 999;
 }
 
 .alert div {
@@ -108,7 +109,8 @@ form {
   margin-left: 0.5em;
 }
 
-.alert-danger {
+.alert-danger,
+.alert-danger-exist {
   transform: translateY(10%);
   opacity: 1;
   color: white;

@@ -31,13 +31,17 @@ const reducer = (state, action) => {
   }
 
   if (action.type === "CLEAR_LIST") {
-    return {
-      ...state,
-      list: [],
-      show: true,
-      type: "danger",
-      msg: "All the items removed",
-    };
+    if (window.confirm("Are you sure you want to delete the all items")) {
+      return {
+        ...state,
+        list: [],
+        show: true,
+        type: "danger",
+        msg: "All the items removed",
+      };
+    } else {
+      return state;
+    }
   }
 
   if (action.type === "REMOVE_ITEM") {

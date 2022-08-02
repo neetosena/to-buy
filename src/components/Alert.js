@@ -6,7 +6,7 @@ import { GoSync } from "react-icons/go";
 
 const Alert = () => {
   const { list, type, msg, showAlert } = useGlobalContext();
-  console.log(type);
+
   useEffect(() => {
     const timeout = setTimeout(() => {
       showAlert();

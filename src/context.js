@@ -30,7 +30,7 @@ const AppProvider = ({ children }) => {
     localStorage.setItem("list", JSON.stringify(state.list));
   }, [state.list]);
 
-  const showAlert = (show = false, type = "", msg = "") => {
+  const showAlert = (show, type, msg) => {
     dispatch({ type: "SHOW_ALERT", payload: { show, type, msg } });
   };
 

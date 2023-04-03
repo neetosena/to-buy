@@ -59,7 +59,13 @@ const reducer = (state, action) => {
     const sortBySelected = [...state.list].sort(
       (a, b) => Number(b.checked) - Number(a.checked)
     );
-    return { ...state, list: sortBySelected };
+    return {
+      ...state,
+      list: sortBySelected,
+      show: true,
+      type: "success-sorted",
+      msg: "Items sorted",
+    };
   }
 
   if (action.type === "CHECK_ITEM_AND_ADD_ITEM") {

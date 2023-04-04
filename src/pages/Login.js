@@ -26,10 +26,11 @@ const Wrapper = styled.section`
   background-image: url(${background});
   background-size: 100%;
   background-position: top left;
+  overflow: hidden;
 
   h1 {
     margin: 0;
-    font-size: 4rem;
+    font-size: 4.5rem;
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -44,7 +45,7 @@ const Wrapper = styled.section`
     border-radius: 0.7em;
     background-color: var(--light-green-color);
     font-family: "Abhaya Libre", serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     align-self: center;
     transition: background ease-in 0.5s;
     animation: fadeInAnimation ease 3s;

@@ -22,12 +22,13 @@ const Wrapper = styled.section`
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   background-image: url(${background});
   background-size: 100%;
   background-position: top left;
 
   h1 {
+    margin: 0;
     font-size: 4rem;
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
@@ -36,6 +37,7 @@ const Wrapper = styled.section`
 
   button {
     display: inline-block;
+    color: black;
     padding: 0.7em 2.5em;
     outline: none;
     border: none;

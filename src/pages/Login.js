@@ -10,8 +10,9 @@ const Login = () => {
   return (
     <Wrapper>
       <h1>Groceries</h1>
+
       <button className="btn-login" onClick={loginWithRedirect}>
-        login / sing up
+        Login / Sign Up
       </button>
     </Wrapper>
   );
@@ -36,6 +37,15 @@ const Wrapper = styled.section`
     animation-fill-mode: forwards;
   }
 
+  p {
+    margin: 1em;
+    padding: 1em;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+  }
+
   button {
     display: inline-block;
     color: black;
@@ -44,7 +54,7 @@ const Wrapper = styled.section`
     border: none;
     border-radius: 0.7em;
     background-color: var(--light-green-color);
-    font-family: "Abhaya Libre", serif;
+    font-family: "Cabinet Grotesk", sans-serif;
     font-size: 1.2rem;
     align-self: center;
     transition: background ease-in 0.5s;

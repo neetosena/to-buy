@@ -4,12 +4,13 @@ import styled from "styled-components";
 
 const AuthWrapper = ({ children }) => {
   const { isLoading, error } = useAuth0();
+
   console.log(error);
 
   if (isLoading) {
     return (
       <Wrapper>
-        <div className="loading"></div>;
+        <div className="loading"></div>
       </Wrapper>
     );
   }
@@ -21,12 +22,15 @@ const AuthWrapper = ({ children }) => {
 };
 
 const Wrapper = styled.div`
-  width: 100%;
-  height: 100vh;
+  all: unset;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0.5;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
 `;
 
 export default AuthWrapper;

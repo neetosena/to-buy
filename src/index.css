@@ -95,10 +95,10 @@ form {
   width: 6rem;
   height: 6rem;
   margin: 0 auto;
-  margin-top: 10rem;
+
   border-radius: 50%;
   border: 3px solid var(--light-green-color);
-  border-top-color: var(--blue-color);
+  border-top-color: white;
   animation: spinner 0.6s linear infinite;
 }
 

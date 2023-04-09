@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import BackgroundError from "../images/background-5.jpg";
 
-const Error = () => {
+const error = () => {
   return (
     <Wrapper>
       <p>This page </p>
@@ -52,4 +52,4 @@ const Wrapper = styled.div`
   }
 `;
 
-export default Error;
+export default error;
